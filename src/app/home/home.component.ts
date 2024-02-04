@@ -1,10 +1,9 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { HousingLocationComponent } from "../housing-location/housing-location.component";
-
 @Component({
   selector: "app-home",
   standalone: true,
+  imports: [CommonModule],
   template: `
     <section>
       <form>
@@ -12,11 +11,7 @@ import { HousingLocationComponent } from "../housing-location/housing-location.c
         <button class="primary" type="button">Search</button>
       </form>
     </section>
-    <section class="results">
-      <app-housing-location></app-housing-location>
-    </section>
   `,
   styleUrls: ["./home.component.css"],
-  imports: [CommonModule, HousingLocationComponent],
 })
 export class HomeComponent {}
